@@ -16,6 +16,8 @@ body{
     padding: 0;
     box-sizing: border-box;
 }
+
+/* Estilos navbar (clase 11) */
 .navbar{
     height: 100%;
     display: flex;
@@ -52,8 +54,10 @@ body{
 .right-navbar li:nth-child(1){
     font-size: var(--md);
     padding-right: 10px;
+    cursor: pointer;
 }
 .right-navbar{
+    position: relative;
     display: flex;
     align-content: center;
 }
@@ -88,7 +92,48 @@ body{
 .arrow{
     transform: rotate(90deg);
     padding-bottom: 0;
+    cursor: pointer;
 }
+
+/* Estilos del menu (clase 7) */
+.desktop-menu{
+    position: absolute;
+    right: 120px;
+    width: 100px;
+    height: auto;
+    border: 1px solid var(--very-ligth-pink);
+    border-radius: 6px;
+    padding: 20px 20px 0 20px;
+}
+.inactive{
+    display: none;
+}
+.desktop-menu ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.desktop-menu li{
+    text-align: end;
+}
+.desktop-menu li:last-child{
+    border-top: 1px solid var(--very-ligth-pink);
+    padding-top: 20px;
+    color: var(--hospital--green);
+}
+.desktop-menu a{
+    text-decoration: none;
+    color: #000;
+    margin-bottom: 20px;
+    display: inline-block;
+    font-weight: bold;
+}
+.desktop-menu li:last-child a{
+    color: var(--hospital--green);
+    font-size: var(--sm);
+    font-weight: lighter;
+}
+
 @media(max-width: 600px){
     .menu{
         display: block;
